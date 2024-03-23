@@ -22,7 +22,8 @@ var twoSum = function(numbers, target) {
         else if (currentSum < target) {
             left++
         } else {
-            console.log([left, right])
+            // we add + 1 for index or pointer left and right because based on the description
+            // the based always start on 1 
             return [left + 1, right+1]
         }
     }
