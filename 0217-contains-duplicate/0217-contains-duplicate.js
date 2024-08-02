@@ -3,16 +3,20 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    let set = new Set()
+    
+    const obj = {}
 
-    for (let i =0; i < nums.length; i++) {
-        if (set.has(nums[i])) return true
+    for (let i=0; i < nums.length; i++) {
+        let num = nums[i]
 
-        set.add(nums[i])
+        if (!obj[num]) {
+            obj[num] = 1
+        } else {
+            return true
+        }
     }
 
     return false
+
 };
 
-// big O time = O(N)
-// big O space = O(N)
